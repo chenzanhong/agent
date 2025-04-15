@@ -1,7 +1,7 @@
 package main
 
 import (
-	"agent/configs"
+	configs "agent/config"
 	"agent/data"
 	"flag"
 	"fmt"

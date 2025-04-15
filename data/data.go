@@ -1,7 +1,7 @@
 package data
 
 import (
-	"backend/agentmonitor/monitor"
+	"agent/monitor"
 	"bytes"
 	"encoding/json"
 	"fmt"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"backend/agentmonitor/configs"
-	"backend/agentmonitor/data"
+	"agent/configs"
+	"agent/data"
 	"flag"
 	"fmt"
 	"log"

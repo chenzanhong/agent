@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	// 定义一个字符串变量，用来接收传入的 host_name 与token参数
+	// 定义一个字符串变量，用来接收传入的 hostname 与token参数
 	hostName := flag.String("hostname", "", "The hostname for the agent")
 	token := flag.String("token", "", "A string of 16 characters")
 

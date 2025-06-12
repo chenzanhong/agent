@@ -1,7 +1,7 @@
 package main
 
 import (
-	"agent/configs"
+	cf "agent/config"
 	"agent/data"
 	"flag"
 	"fmt"
@@ -19,13 +19,13 @@ func main() {
 	// 解析命令行参数
 	flag.Parse()
 	fmt.Printf("hostname:%s,token:%s\n", *hostName, *token)
-	config, err := configs.LoadConfig("./config/config.yaml")
+	config, err := cf.LoadConfig("./config/config.yaml")
 	if err != nil {
 		log.Fatalf("failed to open config file:%v", err)
 		return
 	}
 	// 定义服务器端点的URL
-	serverURL := fmt.Sprintf("http://%s:%s/agent/addSystem_info", config.FrpPublicIp, config.FrpRemotePort) // 使用frp公网地址和端口
+	serverURL := fmt.Sprintf("http://%s:%s/agent/addSystem_info", config.Url, config.Port) // 你的服务器URL
 
 	//创建调度器
 	s := gocron.NewScheduler(time.UTC)

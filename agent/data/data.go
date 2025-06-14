@@ -9,7 +9,7 @@ import (
 )
 
 // 定义服务器的监控信息结构体
-type MonitorData struct {
+type RequestData struct {
 	CPUInfo     []monitor.CPUInfo     `json:"cpu_info"`
 	HostInfo    monitor.HostInfo      `json:"host_info"`
 	MemInfo     monitor.MemoryInfo    `json:"mem_info"`
@@ -18,8 +18,8 @@ type MonitorData struct {
 }
 
 // 收集监控数据
-func CollectMonitorData(hostname string, token string) (MonitorData, error) {
-	datas := MonitorData{}
+func CollectMonitorData(hostname string, token string) (RequestData, error) {
+	datas := RequestData{}
 
 	// 获取CPU使用率
 	cpudata, err := monitor.GetCpuInfo()
@@ -66,7 +66,7 @@ func CollectMonitorData(hostname string, token string) (MonitorData, error) {
 }
 
 // 发送监控数据到服务器
-func SendMonitorData(url string, data MonitorData) error {
+func SendMonitorData(url string, data RequestData) error {
 	jsonData, err := json.Marshal(data)
 	if err != nil {
 		return fmt.Errorf("数据序列化错误: %v", err)

@@ -7,7 +7,7 @@
 ## 使用说明
 1. 克隆本仓库
 ```bash
-git clone https://gitee.com/chenzanhong/agent
+git clone https://gitee.com/chenzanhong/agent.git
 ```bash
 
 2. 进入agent目录，对编译好的二进制文件赋予执行权限，并执行

@@ -1,8 +1,8 @@
 # agent
 
 ## 介绍
-服务器监控管理平台（https://gitee.com/chenzanhong/server_monitor）的客户端代理，主要功能是采集服务器的数据，并通过https请求发送到服务器监控管理平台，用于前台的数据可视化。
-
+服务器监控管理平台的客户端代理，主要功能是采集服务器的数据，并通过https请求发送到服务器监控管理平台，用于前台的数据可视化。
+（https://gitee.com/chenzanhong/server_monitor 或 https://github.com/chenzanhong/server_monitor）
 
 ## 使用说明
 1. 克隆本仓库
